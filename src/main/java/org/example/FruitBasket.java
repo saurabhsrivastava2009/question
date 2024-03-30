@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Given we two arrays of fruit basket and its price, we need to buy max fruits with minimum price.
+ * Given we have two arrays of fruit basket and its price, we need to buy max fruits with minimum price.
  * int[] fruitBasket = {8, 6, 4, 7, 6, 5};
  * int[] priceOfEachBasket = {8, 5, 5, 9, 2, 4};
  * int maxFruits = 15;
