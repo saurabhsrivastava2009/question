@@ -47,6 +47,7 @@ public class MergeTwoStringAlternatively {
         System.out.println("Result String: "+mergeAlternately("abcd","pq",true));
     }
 
+    //All cases passed
     public static String mergeAlternately(String word1, String word2) {
         int startingIndexWord1=0;
         int startingIndexWord2=0;
@@ -78,6 +79,7 @@ public class MergeTwoStringAlternatively {
         return resultString;
     }
 
+    //All cases passed
     public static String mergeAlternately(String word1, String word2,boolean usingSimpleString) {
         String resultString = "";
         int length = Math.max(word1.length(),word2.length());
