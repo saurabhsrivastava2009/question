@@ -40,6 +40,11 @@ public class MergeTwoStringAlternatively {
         System.out.println("Result String: "+mergeAlternately("abcd","pqrs"));
         System.out.println("Result String: "+mergeAlternately("ab","pqrs"));
         System.out.println("Result String: "+mergeAlternately("abcd","pq"));
+
+        ///
+        System.out.println("Result String: "+mergeAlternately("abcd","pqrs",true));
+        System.out.println("Result String: "+mergeAlternately("ab","pqrs",true));
+        System.out.println("Result String: "+mergeAlternately("abcd","pq",true));
     }
 
     public static String mergeAlternately(String word1, String word2) {
@@ -70,6 +75,23 @@ public class MergeTwoStringAlternatively {
         resultString = resultList.toString().replaceAll("[^a-z]","");
         //if any word contains upper case or digit, we need to use RE [^a-zA-Z0-9]
         //Also if the word contains any special character, then we need to use loop instead of replaceAll
+        return resultString;
+    }
+
+    public static String mergeAlternately(String word1, String word2,boolean usingSimpleString) {
+        String resultString = "";
+        int length = Math.max(word1.length(),word2.length());
+        int i=0;
+        while(length>0){
+            if(i<word1.length()) {
+                resultString = resultString + word1.charAt(i);
+            }
+            if(i<word2.length()) {
+                resultString = resultString + word2.charAt(i);
+            }
+            i++;
+            length--;
+        }
         return resultString;
     }
 }
